@@ -8,8 +8,10 @@ This project demonstrates a basic Hardhat use case. It comes with a sample contr
 npx hardhat compile
 npx hardhat clean
 npx hardhat node
-npx hardhat run scripts/greeter.deploy.js --network arbitrum
-npx hardhat test test/greeter.test.js
+npx hardhat node --fork RPC_URL
+npx hardhat run scripts/contract_name.deploy.js --network network_name
+npx hardhat test test/contract_name.test.js
+npx hardhat verify contract_address --network network_name
 ```
 
 **Automatically execute tests on file change:**
